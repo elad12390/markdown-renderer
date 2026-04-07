@@ -6,12 +6,12 @@
   "description": "Render extended markdown into real HTML and SVG with GFM, KaTeX, Mermaid, Graphviz, sanitization, and browser-backed static export.",
   "author": "Elad Benhaim",
   "license": "MIT",
-  "homepage": "https://github.com/eladbenhaim/markdown-renderer#readme",
+  "homepage": "https://github.com/elad12390/markdown-renderer#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eladbenhaim/markdown-renderer.git"
+    "url": "git+https://github.com/elad12390/markdown-renderer.git"
   },
-  "bugs": "https://github.com/eladbenhaim/markdown-renderer/issues",
+  "bugs": "https://github.com/elad12390/markdown-renderer/issues",
   "keywords": [
     "markdown",
     "renderer",
