@@ -51,7 +51,7 @@ function isRenderMode(value: string): value is RenderMode {
   return value === 'client' || value === 'static'
 }
 
-async function main(): Promise<void> {
+export async function runCli(): Promise<void> {
   const args = parseArgs(process.argv.slice(2))
 
   if (args.command && args.command !== 'render')
@@ -75,7 +75,7 @@ async function main(): Promise<void> {
 const isDirectRun = Boolean(process.argv[1]) && import.meta.url === pathToFileURL(process.argv[1]).href
 
 if (isDirectRun) {
-  void main().catch((error) => {
+  void runCli().catch((error) => {
     console.error(error instanceof Error ? error.stack : String(error))
     process.exitCode = 1
   })

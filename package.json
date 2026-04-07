@@ -1,5 +1,5 @@
 {
-  "name": "markdown-renderer",
+  "name": "markdown-renderer-cli",
   "type": "module",
   "version": "0.1.0",
   "packageManager": "pnpm@10.33.0",
@@ -32,11 +32,10 @@
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
-  "bin": {
-    "markdown-renderer": "./dist/cli.mjs"
-  },
+  "bin": "./markdown-renderer-cli",
   "files": [
-    "dist"
+    "dist",
+    "markdown-renderer-cli"
   ],
   "engines": {
     "node": ">=22"

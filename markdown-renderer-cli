@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+import process from 'node:process'
+import { runCli } from './dist/cli.mjs'
+
+void runCli().catch((error) => {
+  console.error(error instanceof Error ? error.stack : String(error))
+  process.exitCode = 1
+})

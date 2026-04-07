@@ -1,4 +1,4 @@
-# markdown-renderer
+# markdown-renderer-cli
 
 Render extended markdown into real HTML and SVG.
 
@@ -16,13 +16,13 @@ Supports:
 ### npx
 
 ```bash
-npx markdown-renderer render --in input.md --out output.html --mode static
+npx markdown-renderer-cli render --in input.md --out output.html --mode static
 ```
 
 ### bunx
 
 ```bash
-bunx markdown-renderer render --in input.md --out output.html --mode static
+bunx markdown-renderer-cli render --in input.md --out output.html --mode static
 ```
 
 ### Client mode
@@ -30,7 +30,7 @@ bunx markdown-renderer render --in input.md --out output.html --mode static
 Client mode keeps browser-only renderers as placeholders:
 
 ```bash
-markdown-renderer render --in input.md --out output.html --mode client
+npx markdown-renderer-cli render --in input.md --out output.html --mode client
 ```
 
 ### Static mode
@@ -38,13 +38,13 @@ markdown-renderer render --in input.md --out output.html --mode client
 Static mode executes browser-only renderers in Chromium and emits final HTML:
 
 ```bash
-markdown-renderer render --in input.md --out output.html --mode static
+npx markdown-renderer-cli render --in input.md --out output.html --mode static
 ```
 
 ## Library API
 
 ```ts
-import { renderToHtmlDocument, renderToStaticHtmlDocument } from 'markdown-renderer'
+import { renderToHtmlDocument, renderToStaticHtmlDocument } from 'markdown-renderer-cli'
 
 const clientHtml = await renderToHtmlDocument(markdown)
 const staticHtml = await renderToStaticHtmlDocument(markdown)
@@ -66,6 +66,11 @@ pnpm build
 - Local end-to-end tests require a one-time `pnpm exec playwright install chromium`.
 - CI installs Chromium before running end-to-end tests.
 - Publishing is intended to use npm trusted publishing.
+- The npm package name and executable are both `markdown-renderer-cli` for the first public release.
+
+## Publishing
+
+See [PUBLISHING.md](./PUBLISHING.md) for the first-release and trusted-publishing steps.
 
 ## License
 

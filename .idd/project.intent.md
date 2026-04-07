@@ -2,7 +2,7 @@
 
 ## Purpose
 
-`markdown-renderer` is a public npm package and CLI for turning extended markdown into real HTML and SVG.
+`markdown-renderer-cli` is the public npm package and CLI binary for turning extended markdown into real HTML and SVG.
 
 ## Product contract
 
